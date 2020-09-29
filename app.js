@@ -5,16 +5,16 @@ app.get('/', function (req, res) {
   res.send('Hello World!');
 });
 
-app.get('/jsonp',function(req,res,next){  
+app.get('/jsonp',function(req,res){  
     res.jsonp({status:'jsonp'});  
  });  
    
- app.get('/json',function(req,res,next){   
+ app.get('/json',function(req,res){   
      res.jsonp({status:'json'});  
  });  
 
 app.use(express.static('public'));
 
 app.listen(3000, function () {
-  console.log('Example app listening on port 3000!');
+  console.log('starting...');
 });
