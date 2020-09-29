@@ -5,11 +5,11 @@ app.get('/', function (req, res) {
   res.send('Hello World!');
 });
 
-app.get('/jsonp',function(req,res,next){  
+app.get('/jsonp',function(req,res){  
     res.jsonp({status:'jsonp'});  
  });  
    
- app.get('/json',function(req,res,next){   
+ app.get('/json',function(req,res){   
      res.jsonp({status:'json'});  
  });  
 
